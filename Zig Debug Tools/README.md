@@ -1,0 +1,2 @@
+# Debug Tools for the Zig Template for Playdate
+These are early attempts to integrate the Dear ImGui bindings from the [Zig Gamedev](https://github.com/zig-gamedev) github. It uses the [zig template]("https://github.com/DanB91/Zig-Playdate-Template"). So far it is working but requires some more effort to get it usable for actual games! If you want to try it out you have to install the PlaydateSDK which adds it to path and then the template

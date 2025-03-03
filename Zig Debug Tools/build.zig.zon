@@ -1,0 +1,17 @@
+.{
+    .name = "zgui",
+    .version = "0.5.0",
+    .paths = .{
+        "build.zig",
+        "build.zig.zon",
+        "libs",
+        "src",
+        "README.md",
+    },
+    .dependencies = .{
+        .zglfw = .{ .path = "libs/zig_gamedev/libs/zglfw" },
+        .zopengl = .{ .path = "libs/zig_gamedev/libs/zopengl" },
+        .system_sdk = .{ .path = "libs/zig_gamedev/libs/system-sdk" },
+        .zgui = .{ .path = "libs/zig_gamedev/libs/zgui" },
+    },
+}

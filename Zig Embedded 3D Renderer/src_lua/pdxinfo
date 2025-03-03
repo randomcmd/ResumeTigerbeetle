@@ -1,0 +1,7 @@
+name=GyroBall
+author=Oxey405
+description=Noone uses the Playdate's gyroscope... how sad!
+bundleID=com.oxey405.gryroball
+version=1.0
+buildNumber=021
+imagePath=launcherCard
