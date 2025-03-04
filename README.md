@@ -1,4 +1,4 @@
-Hi! My name is Adrian or my online nickname Remi and I am a 3rd year university student at the Johannes Gutenberg-University Mainz graduating with a bachelor in computer science early next year. I love making software and am passionate about lower level languages. I am applying mainly because I want to learn more zig and also because I saw many devs bring up tigerbeetle on [ziggit](https://www.ziggit.dev). This is a quick summary of my recent work and motivations for applying. Enjoy!
+Hi! My name is Adrian or my online nickname Remi and I am a 3rd year university student at the Johannes Gutenberg-University Mainz graduating with a bachelor in computer science early next year. I love making software and am passionate about lower level languages. I am applying mainly because I want to learn more zig and also because I saw many devs bring up tigerbeetle on [ziggit](https://ziggit.dev). This is a quick summary of my recent work and motivations for applying. Enjoy!
 
 ## Projects
 ### ImGui Editor
@@ -21,7 +21,7 @@ I have yet to use zig for a bigger project, but I have a few smaller projects/ex
     
     This is a screen recording of the gameplay |  Video of the device itself
     :-----------------------------------------:|:-------------------------:
-    ![](visuals/zig_renderer_screen_recording.mp4)  |  ![](visuals/zig_renderer_on_device.mp4)
+    ![](visuals/zig_renderer_screen_recording.png)  |  ![](visuals/zig_renderer_on_device.mp4)
     
 
     Here is the same game running on device
