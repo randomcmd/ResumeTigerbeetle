@@ -47,19 +47,19 @@ const DebugState = switch (builtin.os.tag) {
             glfw.init() catch return;
             const gl_major = 4;
             const gl_minor = 0;
-            glfw.windowHintTyped(.context_version_major, gl_major);
-            glfw.windowHintTyped(.context_version_minor, gl_minor);
-            glfw.windowHintTyped(.opengl_profile, .opengl_core_profile);
-            glfw.windowHintTyped(.opengl_forward_compat, true);
-            glfw.windowHintTyped(.client_api, .opengl_api);
-            glfw.windowHintTyped(.doublebuffer, true);
+            glfw.windowHint(.context_version_major, gl_major);
+            glfw.windowHint(.context_version_minor, gl_minor);
+            glfw.windowHint(.opengl_profile, .opengl_core_profile);
+            glfw.windowHint(.opengl_forward_compat, true);
+            glfw.windowHint(.client_api, .opengl_api);
+            glfw.windowHint(.doublebuffer, true);
             this.window = glfw.Window.create(600, 600, "zig-gamedev: minimal_glfw_gl", null) catch return;
             glfw.makeContextCurrent(this.window);
             opengl.loadCoreProfile(glfw.getProcAddress, gl_major, gl_minor) catch return;
             imgui.init(this.allocator);
             imgui.io.setConfigFlags(.{
                 .dock_enable = true,
-                .viewport_enable = true,
+                .viewport_enable = false, // Viewports are available on my local fork, but requires change to imgui bindings
             });
             imgui.backend.init(this.window);
         }
@@ -73,7 +73,6 @@ const DebugState = switch (builtin.os.tag) {
         pub fn update_and_render(this: *DebugState) void {
             imgui.render();
             imgui.backend.draw();
-            imgui.updateViewports();
             this.window.swapBuffers();
         }
     },
@@ -225,10 +224,10 @@ fn update_and_render(userdata: ?*anyopaque) callconv(.C) c_int {
     const debug_state = struct {
         var toggle: bool = false;
     };
-    if(imgui.button("Toggle Colors", .{})) {
+    if (imgui.button("Toggle Colors", .{})) {
         debug_state.toggle = !debug_state.toggle;
     }
-    if(buttons & pdapi.BUTTON_A != 0) {
+    if (buttons & pdapi.BUTTON_A != 0) {
         debug_state.toggle = false;
     }
     //Yes, Zig fixed bitwise operator precedence so that this works!

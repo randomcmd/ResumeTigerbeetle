@@ -1,5 +1,6 @@
 .{
-    .name = "zgui",
+    .name = .zgui,
+    .fingerprint = 0xe78160e874705c5,
     .version = "0.5.0",
     .paths = .{
         "build.zig",
@@ -9,9 +10,21 @@
         "README.md",
     },
     .dependencies = .{
-        .zglfw = .{ .path = "libs/zig_gamedev/libs/zglfw" },
-        .zopengl = .{ .path = "libs/zig_gamedev/libs/zopengl" },
-        .system_sdk = .{ .path = "libs/zig_gamedev/libs/system-sdk" },
-        .zgui = .{ .path = "libs/zig_gamedev/libs/zgui" },
+        .zglfw = .{
+            .url = "https://github.com/zig-gamedev/zglfw/archive/e9bd486903b5904b6d4e27b8b3771b138a667ef1.tar.gz",
+            .hash = "12209fb981e7aab58c2f9062ab526bd43df3d7953aa41e131a173c37ad35d10b1132",
+        },
+        .zopengl = .{
+            .url = "https://github.com/zig-gamedev/zopengl/archive/c9c293a9af388478bca0ad52007a72372ef71747.tar.gz",
+            .hash = "1220c030f5e33e09bd80fe7a7b064b65e1fc02e9bbf603ba04716866c9f1ca16f8ce",
+        },
+        .system_sdk = .{
+            .url = "https://github.com/zig-gamedev/system_sdk/archive/d1e724748d15cfcbf50c45ec7c7019688d45b16a.tar.gz",
+            .hash = "122047a9298c4c9dd43389d418d6826d469b192246ba0944102964cdc57f94c562df",
+        },
+        .zgui = .{
+            .url = "https://github.com/zig-gamedev/zgui/archive/655a123f5da273f5e745d587d42ac652b3ca441e.tar.gz",
+            .hash = "1220d4d6e539b6c60ae448ac3b2c724cccdf9e53eb889a16a5a3dc9689feca4e8c7e",
+        },
     },
 }
