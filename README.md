@@ -8,6 +8,10 @@ Hi! My name is Adrian or my online nickname Remi and I am a 3rd year university 
 ### OpenGL Game Engine:
 I read and followed the LearnOpenGL book combining it with tutorials from The Cherno to make a very basic 3D renderer or beginnings of a game engine. This was one of my first low level projects and introduced me to game engines and graphics programming especially shaders!
 
+
+
+
+
 ### Kuromis2:
 Me and my friend have a small github organisation mostly for fun where we made a [firmware updater](https://github.com/kuromis-2/finalware) for finalmouse mice when mac/linux versions werent officially supported yet. Allthough it is just an electron app, it was very nice to see this play out since our focus was on quickly supporting those platforms.
 
@@ -18,13 +22,25 @@ I have yet to use zig for a bigger project, but I have a few smaller projects/ex
 
 - [Playdate 3D Engine](linktoengine): Me and some of the developers from the Playdate Squad community have worked on a proof of concept 3D game engine in Zig. Playdate by Panic is a handheld embedded console with an open C and Lua SDK for developers to create games. Allthough very basic and never released it showed the viability of zig to write efficient embedded software renderers in a short amount of time due to the ability to use interop with C. The official repository is private, but I have attached a cleaned up version of the [source code](linketoengine)!
 
-    
-    This is a screen recording of the gameplay |  Video of the device itself
-    :-----------------------------------------:|:-------------------------:
-    ![](visuals/zig_renderer_screen_recording.png)  |  ![](visuals/zig_renderer_on_device.mp4)
-    
 
-    Here is the same game running on device
+    <table>
+        <tr>
+            <th>
+                This is a screen recording of the gameplay
+            </th>
+            <th>
+                Video of the device itself
+            </th>
+        </tr>
+        <tr>
+            <td>
+                <img src="visuals/zig_renderer_screen_recording.png" alt="A bunch of cubes floating with a player walking through them">
+            </td>
+            <td>
+                <video src="https://github.com/user-attachments/assets/588c3d78-28bc-48d9-8105-6ad4651a98fa" controls style="max-width: 100%;" autoplay alt="A video of a yellow playdate console playing the cube game"></video>  
+            </td>
+        </tr>
+    </table>
 
 - [Playdate Debug Tools](linktodebugtools): I tried integrating Dear ImGui with the simulator builds of playdate games to provide a better debugging experience. This is a common theme: I want to make something, but then just make dev tools! This worked out greatly but I need to make changes so it builds for linux from windows
 
