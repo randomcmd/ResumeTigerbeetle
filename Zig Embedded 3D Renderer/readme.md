@@ -1,2 +1,2 @@
 # 3D Game on Playdate?
-This is a cleaned up version for my application for TigerBeetle.
+This is a cleaned up version for my application for TigerBeetle. If you want to try it out you have to install the PlaydateSDK and then just run zig build run on Zig master (0.14.0 latest).
