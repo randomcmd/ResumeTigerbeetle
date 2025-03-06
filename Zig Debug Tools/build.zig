@@ -41,7 +41,7 @@ pub fn build(b: *std.Build) !void {
         ),
     };
     for (supported_targets) |target| {
-        if (target.result.os.tag != .windows) continue;
+        if (target.result.os.tag != b.graph.host.result.os.tag) continue;
         try compile_simulator_binary(b, optimize, target, writer);
     }
 
