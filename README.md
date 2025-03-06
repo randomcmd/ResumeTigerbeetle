@@ -20,7 +20,7 @@ I have yet to use zig for a bigger project, but I have a few smaller projects/ex
 
 - ImGuiEditor Zig: I have tried implementing several smaller features of ImGuiEditor to see how zig would improve that code
 
-- [Playdate 3D Engine](linktoengine): Me and some of the developers from the Playdate Squad community have worked on a proof of concept 3D game engine in Zig. Playdate by Panic is a handheld embedded console with an open C and Lua SDK for developers to create games. Allthough very basic and never released it showed the viability of zig to write efficient embedded software renderers in a short amount of time due to the ability to use interop with C. The official repository is private, but I have attached a cleaned up version of the [source code](linketoengine)!
+- [Playdate 3D Engine](<Zig Embedded 3D Renderer>): Me and some of the developers from the Playdate Squad community have worked on a proof of concept 3D game engine in Zig. Playdate by Panic is a handheld embedded console with an open C and Lua SDK for developers to create games. Allthough very basic and never released it showed the viability of zig to write efficient embedded software renderers in a short amount of time due to the ability to use interop with C. The official repository is private, but I have attached a cleaned up version of the [source code](<Zig Embedded 3D Renderer>)!
 
 
     <table>
@@ -42,7 +42,7 @@ I have yet to use zig for a bigger project, but I have a few smaller projects/ex
         </tr>
     </table>
 
-- [Playdate Debug Tools](linktodebugtools): I tried integrating Dear ImGui with the simulator builds of playdate games to provide a better debugging experience. This is a common theme: I want to make something, but then just make dev tools! This worked out greatly but I need to make changes so it builds for linux from windows
+- [Playdate Debug Tools](<Zig Debug Tools>): I tried integrating Dear ImGui with the simulator builds of playdate games to provide a better debugging experience. This is a common theme: I want to make something, but then just make dev tools! This worked out greatly but I need to make changes so it builds for linux from windows
 
 - Playdate Demos: Ported a small 2d game to zig to see how game dev feels on zig coming from other languages
 
