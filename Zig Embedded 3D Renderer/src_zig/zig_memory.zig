@@ -7,6 +7,7 @@ pub const playdate_allocator = struct {
         .alloc = alloc,
         .resize = resize,
         .free = free,
+        .remap = remap,
     };
     pub fn Allocator(playdate: *play.PlaydateAPI) std.mem.Allocator {
 
@@ -16,14 +17,14 @@ pub const playdate_allocator = struct {
         };
     }
 
-    fn alloc(ctx: *anyopaque, n: usize, log2_ptr_align: u8, ra: usize) ?[*]u8 {
+    fn alloc(ctx: *anyopaque, n: usize, log2_ptr_align: std.mem.Alignment, ra: usize) ?[*]u8 {
         _ = log2_ptr_align;
         _ = ra;
         const playdate: *play.PlaydateAPI = @alignCast(@ptrCast(ctx));
         return @alignCast(@ptrCast(playdate.system.realloc(null, n)));
     }
 
-    fn resize(ctx: *anyopaque, buf: []u8, log2_buf_align: u8, new_len: usize, ret_addr: usize) bool {
+    fn resize(ctx: *anyopaque, buf: []u8, log2_buf_align: std.mem.Alignment, new_len: usize, ret_addr: usize) bool {
         _ = ctx;
         _ = buf;
         _ = log2_buf_align;
@@ -32,10 +33,19 @@ pub const playdate_allocator = struct {
         return false;
     }
 
-    fn free(ctx: *anyopaque, buf: []u8, log2_buf_align: u8, ret_addr: usize) void {
+    fn free(ctx: *anyopaque, buf: []u8, log2_buf_align: std.mem.Alignment, ret_addr: usize) void {
         _ = log2_buf_align;
         _ = ret_addr;
         const playdate: *play.PlaydateAPI = @alignCast(@ptrCast(ctx));
         _ = playdate.system.realloc(@alignCast(@ptrCast(buf)), 0);
+    }
+
+    fn remap (ctx: *anyopaque, memory: []u8, alignment: std.mem.Alignment, new_len: usize, ret_addr: usize) ?[*]u8 {
+        _ = ctx;
+        _ = memory;
+        _ = alignment;
+        _ = new_len;
+        _ = ret_addr;
+        return null;
     }
 };
