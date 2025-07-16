@@ -20,7 +20,7 @@ I have yet to use zig for a bigger project, but I have a few smaller projects/ex
 
 - ImGuiEditor Zig: I have tried implementing several smaller features of ImGuiEditor to see how zig would improve that code
 
-- [Playdate 3D Engine](<Zig Embedded 3D Renderer>): Me, @Oxey405 and some of the developers from the Playdate Squad community have worked on a proof of concept 3D game engine in Zig. Playdate by Panic is a handheld embedded console with an open C and Lua SDK for developers to create games. Allthough very basic and never released it showed the viability of zig to write efficient embedded software renderers in a short amount of time due to the ability to use interop with C. The official repository is private, but I have attached a cleaned up version of the [source code](<Zig Embedded 3D Renderer>)!
+- [Playdate 3D Engine](<Zig Embedded 3D Renderer>): Me, [Oxey405](https://oxey405.com) and some of the developers from the Playdate Squad community have worked on a proof of concept 3D game engine in Zig. Playdate by Panic is a handheld embedded console with an open C and Lua SDK for developers to create games. Allthough very basic and never released it showed the viability of zig to write efficient embedded software renderers in a short amount of time due to the ability to use interop with C. The official repository is private, but I have attached a cleaned up version of the [source code](<Zig Embedded 3D Renderer>)!
 
 
     <table>
